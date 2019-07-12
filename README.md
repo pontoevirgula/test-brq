@@ -1,7 +1,8 @@
 # test-brq
-1 - O ID 3 da montadora deverá ser exibido sempre por último.
 
-2 - Escrever uma modelagem relacionando os objetos Montadora, Carro e Peças.
+1 - Escrever uma modelagem relacionando os objetos Montadora, Carro e Peças.
+
+2 - O ID 3 da montadora deverá ser exibido sempre por último.
 
 3 - Criar um Log que exiba a quantidade de carros em cada montadora
 
