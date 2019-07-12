@@ -10,6 +10,8 @@ import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var montadoraResponse : Montadoras
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,7 +19,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        val montadoraResponse = Gson().fromJson(getJsonFromAssets(), Any::class.java/*TODO Change object*/)
+        montadoraResponse = Gson().fromJson(getJsonFromAssets(), Montadoras::class.java/*TODO Change object*/)
+        val teste = montadoraResponse
     }
 
     private fun getJsonFromAssets(): String {
@@ -25,4 +28,18 @@ class MainActivity : AppCompatActivity() {
             it.readText()
         }
     }
+
+
+
+
 }
+
+
+//
+//data class Montadoras(var montadoraList: List<MontadoraItem>)
+//
+//data class MontadoraItem(var id : Int,var nome : String, var carros: List<Carros>)
+//
+//data class Carros (var id : Int, var nome : String, var pecas : List<Pecas>)
+//
+//data class Pecas (var id : Int, var nome : String)
