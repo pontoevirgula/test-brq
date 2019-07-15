@@ -70,12 +70,3 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-
-//
-//data class Montadoras(var montadoraList: List<MontadoraItem>)
-//
-//data class MontadoraItem(var id : Int,var nome : String, var carros: List<Carros>)
-//
-//data class Carros (var id : Int, var nome : String, var pecas : List<Pecas>)
-//
-//data class Pecas (var id : Int, var nome : String)
