@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                 carroItemList = montadoraItem.carros.toMutableList()
                 for (carro: CarrosItem? in carroItemList) {
                     if (carro?.nome == null) carro?.nome = "com nome desconhecido"
-                    contadorPecas = if (carro?.pecas != null) carro.pecas.size else 0
+                    contadorPecas = carro?.pecas?.size ?: 0
                     Log.i("NUMERO DE PEÇAS", "O carro ${carro?.nome} tem $contadorPecas peças")
                 }
             }else{
